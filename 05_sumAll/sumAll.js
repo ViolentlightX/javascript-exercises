@@ -1,7 +1,7 @@
 const sumAll = function(start, end) {
     let sumNum = 0;
     let difNum = 0;
-    if(start < 0 || end < 0) return 'ERROR';
+    if(start < 0 || end < 0 || !Number.isInteger(start) || !Number.isInteger(end)) return 'ERROR';
     if(start > end) {
         difNum = start - end;
         for(i = 0; i <= difNum; i++) {
