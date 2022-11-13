@@ -1,7 +1,17 @@
 const sumAll = function(start, end) {
     let sumNum = 0;
-    for(i = start; i <= end; i++) {
-        sumNum += i;
+    let difNum = 0;
+    if(start < 0 || end < 0) return 'ERROR';
+    if(start > end) {
+        difNum = start - end;
+        for(i = 0; i <= difNum; i++) {
+            sumNum += end + i;
+        }
+    } else {
+        difNum = end - start;
+        for(i = 0; i <= difNum; i++) {
+            sumNum += start + i;
+        }
     }
     return sumNum;
 };
